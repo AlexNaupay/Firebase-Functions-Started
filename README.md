@@ -31,6 +31,11 @@ firebase functions:config:get > .runtimeconfig.json
 firebase functions:config:set configuration.MY_VAR='MY_VALUE'
 ```
 
+## Emulators settings
+```bash
+firebase init emulators
+```
+
 ## References
 - [Firebase cloud functions](https://firebase.google.com/docs/functions/get-started)
 - [Typescript functions](https://firebase.google.com/docs/functions/typescript)
