@@ -12,5 +12,5 @@ initializeApp();
 export const helloWorld = onRequest((request, response) => {
     logger.info("Hello logs!", {structuredData: true});
     debugger
-    response.send("Hello from Firebase change!");
+    response.send("Hello from Firebase change rt!");
 });
