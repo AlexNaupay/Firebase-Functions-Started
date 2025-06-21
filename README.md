@@ -1,6 +1,22 @@
 # Firebase Cloud Functions
 ```bash
-firebase init functions
+npm install -g firebase-tools  # firebase command
+
+firebase init functions # On your project init functions
+npm install  # pnpm errors
+
+# On functions directory
+npm run build
+firebase emulators:start  # (build previously) . OR
+firebase functions:shell
+
+npm run serve  # build and start emulator
+
+# Recommended: build:watch, serve in another terminal 
+npm run build:watch
+npm run dev # npm run serve 
+# chrome://inspect/#devices
+
 ```
 
 ## References
