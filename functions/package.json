@@ -3,7 +3,8 @@
   "scripts": {
     "build": "tsc",
     "build:watch": "tsc --watch",
-    "dev": "npm run build && firebase emulators:start --inspect-functions --only functions",
+    "dev": "npm run build && firebase emulators:start --inspect-functions",
+    "dev:functions": "npm run build && firebase emulators:start --inspect-functions --only functions",
     "serve": "npm run build && firebase emulators:start --only functions",
     "shell": "npm run build && firebase functions:shell",
     "start": "npm run shell",

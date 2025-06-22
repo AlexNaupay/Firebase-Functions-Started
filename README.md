@@ -25,10 +25,12 @@ firebase deploy --only functions:helloworld
 firebase functions:delete helloworld
 firebase functions:log
 
-# Config
+# Functions config
+# Functions provides methods for managing environment configuration variables
 firebase functions:config:get
 firebase functions:config:get > .runtimeconfig.json
-firebase functions:config:set configuration.MY_VAR='MY_VALUE'
+firebase functions:config:set conf_key.var_key='A value'  # must have a 2-part key
+firebase functions:config:unset <path>
 ```
 
 ## Emulators settings
@@ -39,3 +41,4 @@ firebase init emulators
 ## References
 - [Firebase cloud functions](https://firebase.google.com/docs/functions/get-started)
 - [Typescript functions](https://firebase.google.com/docs/functions/typescript)
+- [Config env](https://firebase.google.com/docs/functions/config-env?gen=2nd)
