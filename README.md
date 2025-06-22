@@ -53,3 +53,5 @@ firebase use prod  # use .env .env.prod
 - [Firebase cloud functions](https://firebase.google.com/docs/functions/get-started)
 - [Typescript functions](https://firebase.google.com/docs/functions/typescript)
 - [Config env](https://firebase.google.com/docs/functions/config-env?gen=2nd)
+- [Organize functions](https://firebase.google.com/docs/functions/organize-functions?gen=2nd)
+- [Firebase Emulators](https://firebase.google.com/docs/emulator-suite)
