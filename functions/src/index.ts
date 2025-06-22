@@ -7,6 +7,7 @@ import {onDocumentCreated} from 'firebase-functions/v2/firestore';
 setGlobalOptions({maxInstances: 10});
 
 const welcomeMessage = defineString('WELCOME_MESSAGE')
+const username = defineString('USERNAME')
 
 // The Firebase Admin SDK to access Firestore.
 import {initializeApp} from 'firebase-admin/app';
@@ -14,9 +15,9 @@ import {initializeApp} from 'firebase-admin/app';
 initializeApp();
 
 export const helloWorld = onRequest((request, response) => {
-    logger.info("Hello logs!", {structuredData: true});
+    logger.info("Hello logs!", process.env.WELCOME_MESSAGE);
     debugger
-    response.send(`Hello from Firebase! ${welcomeMessage.value()}`);
+    response.send(`Hello from Firebase! ${welcomeMessage.value()} ${username.value()}`);
 });
 
 export const onPostCreated = onDocumentCreated('posts/{id}',(event)=>{

@@ -38,6 +38,17 @@ firebase functions:config:unset <path>
 firebase init emulators
 ```
 
+## Config Env
+```bash
+# https://firebase.google.com/docs/functions/config-env?gen=2nd
+# The environment variables from .env and project-specific .env files (if they exist) will be included in all deployed functions.
+firebase use dev  # use .env .env.dev
+firebase use prod  # use .env .env.prod
+
+# When using a local Cloud Functions emulator,
+# .env.local take precedence over .env and the project-specific .env file.
+```
+
 ## References
 - [Firebase cloud functions](https://firebase.google.com/docs/functions/get-started)
 - [Typescript functions](https://firebase.google.com/docs/functions/typescript)
