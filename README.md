@@ -25,7 +25,7 @@ firebase deploy --only functions:helloworld
 firebase functions:delete helloworld
 firebase functions:log
 
-# Functions config
+# Functions config (Legacy)
 # Functions provides methods for managing environment configuration variables
 firebase functions:config:get
 firebase functions:config:get > .runtimeconfig.json

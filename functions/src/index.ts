@@ -6,6 +6,7 @@ import {onDocumentCreated} from 'firebase-functions/v2/firestore';
 
 setGlobalOptions({maxInstances: 10});
 
+// Define variable, functions ensure it exists at deploy and during execution
 const welcomeMessage = defineString('WELCOME_MESSAGE')
 const username = defineString('USERNAME')
 
