@@ -51,6 +51,19 @@ firebase use prod  # use .env .env.prod
 # .env.local take precedence over .env and the project-specific .env file.
 ```
 
+## Be careful with
+- Secrets values: [Secrets with emulators](https://firebase.google.com/docs/functions/config-env?gen=2nd#secrets_and_credentials_in_the_emulator)
+- Tip: Create .secret.local in development
+- Push notifications: With credentials of a current project (.firebaserc or --project in cli)
+
+
+## Projects
+```bash
+firebase projects:list
+firebase use <project-id | alias> # use project for commands
+firebase use --add # to define a new project alias
+```
+
 ## References
 - [Firebase cloud functions](https://firebase.google.com/docs/functions/get-started)
 - [Typescript functions](https://firebase.google.com/docs/functions/typescript)
