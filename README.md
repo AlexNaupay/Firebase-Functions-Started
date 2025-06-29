@@ -36,6 +36,8 @@ firebase functions:config:unset <path>
 ## Emulators settings
 ```bash
 firebase init emulators
+firebase emulators:start # Look for firebase.json and functions/lib
+firebase emulators:start --project project-app  # Or: firebase use <project-id>
 ```
 
 ## Config Env
