@@ -62,6 +62,8 @@ firebase use prod  # use .env .env.prod
 firebase projects:list
 firebase use <project-id | alias> # use project for commands
 firebase use --add # to define a new project alias
+firebase open 
+firebase open functions # Abre la sección de Cloud Functions
 ```
 
 ## References
