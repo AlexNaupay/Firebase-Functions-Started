@@ -20,10 +20,20 @@ npm run dev # npm run serve
 
 ## Functions commands
 ```bash
+# Deploy
 firebase deploy --only functions  # All functions
 firebase deploy --only functions:helloworld
+firebase deploy --only functions:function1,functions:function2
+firebase deploy --only functions:group-name
+
+# Delete
 firebase functions:delete helloworld
+firebase functions:delete funtion1 funtion2
+
+# Log and list
+firebase functions:list
 firebase functions:log
+firebase functions:log --only function-name
 
 # Functions config (Legacy)
 # Functions provides methods for managing environment configuration variables
@@ -49,6 +59,14 @@ firebase use prod  # use .env .env.prod
 
 # When using a local Cloud Functions emulator,
 # .env.local take precedence over .env and the project-specific .env file.
+
+# Secrets
+firebase functions:secrets:set MY_API_KEY
+firebase functions:secrets:get MY_API_KEY
+firebase functions:secrets:access MY_API_KEY
+firebase functions:secrets:destroy SECRET_NAME
+# Automatically clean up all secrets that aren't referenced by any of your functions
+firebase functions:secrets:prune
 ```
 
 ## Be careful with
